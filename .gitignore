@@ -1,0 +1,8 @@
+*.o
+*.pdf
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.zip
+auto/
