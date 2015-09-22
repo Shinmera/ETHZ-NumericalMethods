@@ -1,0 +1,62 @@
+\providecommand{\doctitle}{Not Untitled}
+\providecommand{\docauthor}{Nicolas Hafner}
+\providecommand{\doccopyright}{Shirakumo}
+
+\documentclass[12pt,a4paper,titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=1.5cm, bottom=2.5cm, left=1cm, right=1cm]{geometry}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{fix-cm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{datetime}
+\usepackage{enumitem}
+\usepackage{minted}
+
+\newdateformat{dmny}{\monthname[\THEMONTH] \THEYEAR}
+\newdateformat{dyo}{\THEYEAR}
+\setlength{\headheight}{30pt}
+\pagestyle{fancy}
+
+\title{\doctitle}
+\author{\docauthor}
+\date{\d_mny\today}
+
+\lhead{\docauthor}
+\chead{\doctitle}
+\lfoot{\copyright \dyo\today\; \doccopyright}
+\cfoot{\thepage\ / \pageref{LastPage}}
+\rhead{\dmny\today}
+
+\definecolor{mintedbg}{rgb}{0.2,0.2,0.2}
+\usemintedstyle{monokai}
+\newmintedfile[matlabcode]{matlab}{
+  bgcolor=mintedbg, fontfamily=tt,   linenos=true,     numberblanklines=true,
+  numbersep=12pt,   numbersep=5pt,   gobble=0,         frame=leftline,
+  framerule=0.4pt,  framesep=2mm,    funcnamehighlighting=true,
+  tabsize=4,        obeytabs=false,  mathescape=false, samepage=false,
+  showspaces=false, showtabs =false, texcl=false,
+}
+
+\newmintedfile[cppcode]{cpp}{
+  bgcolor=mintedbg, fontfamily=tt,   linenos=true,     numberblanklines=true,
+  numbersep=12pt,   numbersep=5pt,   gobble=0,         frame=leftline,
+  framerule=0.4pt,  framesep=2mm,    funcnamehighlighting=true,
+  tabsize=4,        obeytabs=false,  mathescape=false, samepage=false,
+  showspaces=false, showtabs =false, texcl=false,
+}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% End:
