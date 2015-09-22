@@ -1,10 +1,43 @@
-\newcommand{\doctitle}{Num CSE Problem Sheet 1}
-\input{/home/linus/Projects/TEX/header.tex}
-\section{Problem 1}
+\newcommand{\doctitle}{Numerical Methods Problem Sheet 1}
+\input{../../template-header.tex}
 
-\input{/home/linus/Projects/TEX/footer.tex}
+\begin{document}
+\begin{center}{\bfseries\Huge\doctitle}\end{center}
+
+\section{Problem 1}
+\subsection{}
+
+$$ \left(\begin{array}{ccccc}
+     d_1 & 0 & \hdots & 0 & a_1 \\
+     0 & d_2 & \ddots & \vdots & a_2 \\
+     \vdots & \ddots & \ddots & 0 & \vdots \\
+     0 & \hdots & 0 & d_{n-1} & a_{n-1} \\
+     a_1 & a_2 & \hdots & a_{n-1} & d_n
+\end{array}\right) $$
+
+\subsection{}
+
+We are creating a Matrix $A$ of $n^2$ size. The matrix is then cubed, which is at worst an $O(n^3)$ operation. At smaller sizes constant overhead is going to dominate, explaining the divergence from $n^3$.
+
+\subsection{}
+
+\matlabcode{../arrowmatvec2.m}
+
+\subsection{}
+
+
+\subsection{}
+
+
+\subsection{}
+
+\cppcode{../e1.cpp}
+
+\end{document}
 
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: t
+%%% TeX-engine: luatex
+%%% TeX-command-extra-options: "-shell-escape"
 %%% End:
