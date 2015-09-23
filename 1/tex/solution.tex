@@ -29,13 +29,37 @@ Since we just perform two Matrix multiplications with a vector we get a complexi
 
 \subsection{}
 
-\begin{figure}[h!]
-  \includegraphics[scale=0.6]{./e1e.png}
+\begin{figure}[H]
+  \centering\includegraphics[scale=0.65]{./e1e.png}
 \end{figure}
 
 \subsection{}
 
 \cppcode{../e1.cpp}
+
+\section{Problem 2}
+\subsection{}
+$$ f_1(x_0,h) := \sin(x_0+h)-\sin(x_0) $$
+$$ f_2(x_0,h) := 2\cos(x_o+h)\sin\left(\frac{h}{2}\right) $$
+$$ \frac{\sin(x_0+h)-\sin(x_0)}{h} = \frac{2\cos(x_0+h)\sin\left(\frac{h}{2}\right)}{h} $$
+
+\begin{figure}[H]
+  \centering\includegraphics[scale=0.8]{./e2a.png}
+\end{figure}
+
+As we cannot calculate the sine exactly and instead need to approximate it, there will always be an error in the result. Thus, subtracting two sines will result in the cancellation phenomenon, increasing the relative error. Avoiding the subtraction will yield a more accurate result.
+
+\subsection{}
+$$ \ln(x-\sqrt{x^2-1}) = \ln\left((x-\sqrt{x^2-1})\frac{x+\sqrt{x^2-1}}{x+\sqrt{x^2-1}}\right) = \ln\left(\frac{-1}{x+\sqrt{x^2-1}}\right) = -\ln(x+\sqrt{x^2-1}) $$
+
+Even slight deviation from $0$ ($\sim x\notin [0.003,1.5]$) will result in differences between the two formula. \\
+
+Again, the square root is an approximate function in cases where the number is not a known square, resulting in an error. Cancellation will amplify this error.
+
+\subsection{}
+$$ \sqrt{x+\frac{1}{x}}-\sqrt{x-\frac{1}{x}} = (..-..)\frac{..+..}{..+..} = \frac{x+\frac{1}{x}-x+\frac{1}{x}}{..+..} = \frac{2}{\sqrt{x^3+x}+\sqrt{x^3-x}} $$
+
+Square roots and addition of numbers with large exponent differences will result in errors. By changing the formula up, both of these problems can be avoided.
 
 \end{document}
 
