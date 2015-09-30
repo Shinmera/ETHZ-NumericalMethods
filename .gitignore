@@ -6,3 +6,4 @@
 *.synctex.gz
 *.zip
 auto/
+_minted-solution
