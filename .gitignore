@@ -1,5 +1,4 @@
 *.o
-*.pdf
 *.aux
 *.log
 *.out
@@ -7,3 +6,4 @@
 *.zip
 auto/
 _minted-solution
+CMakeFiles
